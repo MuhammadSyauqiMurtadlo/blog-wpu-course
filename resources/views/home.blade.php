@@ -42,7 +42,7 @@
           <div class="ml-4 flex items-center md:ml-6">
 
             <!-- Profile dropdown -->
-            <div class="relative ml-3">
+            <div class="relative ml-3 z-50">
               <button class="relative flex max-w-xs items-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500" type="button" @click="isOpen = !isOpen">
                 <span class="absolute -inset-1.5"></span>
                 <span class="sr-only">Open user menu</span>
@@ -100,7 +100,7 @@
     </div>
   </nav>
 
-  <header class="relative bg-gray-800 after:pointer-events-none after:absolute after:inset-x-0 after:inset-y-0 after:border-y after:border-white/10">
+  <header class=" bg-gray-800 after:pointer-events-none after:absolute after:inset-x-0 after:inset-y-0 after:border-y after:border-white/10">
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
       <h1 class="text-3xl font-bold tracking-tight text-white">Dashboard</h1>
     </div>
