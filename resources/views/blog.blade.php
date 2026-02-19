@@ -107,7 +107,7 @@
   </header>
   <main>
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <p class="mt-2 text-lg text-gray-300">Get in touch with us for any inquiries or support.</p>
+        <p class="mt-2 text-lg text-gray-300">Welcome to our blog! Here you'll find the latest news, insights, and updates from our team.</p>
     </div>
   </main>
 </div>

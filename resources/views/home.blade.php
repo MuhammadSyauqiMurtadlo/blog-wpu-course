@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home Page</title>
+    <title>{{ $title }}</title>
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -31,10 +31,10 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-              <a href="#" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Home</a>
-              <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Blog</a>
-              <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">About</a>
-              <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contact</a>
+              <a href="/" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Home</a>
+              <a href="/blog" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Blog</a>
+              <a href="/about" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">About</a>
+              <a href="/contact" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contact</a>
             </div>
           </div>
         </div>
@@ -50,9 +50,9 @@
               </button>
 
               <div class="absolute right-0 mt-2 w-48 rounded-md bg-gray-800 py-1 outline-1 -outline-offset-1 outline-white/10 shadow-lg" x-show="isOpen" @click.outside="isOpen = false" x-transition>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 focus:bg-white/5 focus:outline-hidden">Your profile</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 focus:bg-white/5 focus:outline-hidden">Settings</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 focus:bg-white/5 focus:outline-hidden">Sign out</a>
+                <a href="/profile" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 focus:bg-white/5 focus:outline-hidden">Your profile</a>
+                <a href="/settings" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 focus:bg-white/5 focus:outline-hidden">Settings</a>
+                <a href="/logout" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 focus:bg-white/5 focus:outline-hidden">Sign out</a>
               </div>
             </div>
           </div>
@@ -76,10 +76,10 @@
     <div id="mobile-menu" x-show="isOpen" x-transition class="block md:hidden">
       <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
         <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-        <a href="#" aria-current="page" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Home</a>
-        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Blog</a>
-        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">About</a>
-        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contact</a>
+        <a href="/" aria-current="page" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Home</a>
+        <a href="/blog" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Blog</a>
+        <a href="/about" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">About</a>
+        <a href="/contact" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contact</a>
       </div>
       <div class="border-t border-white/10 pt-4 pb-3">
         <div class="flex items-center px-5">
@@ -92,9 +92,9 @@
           </div>
         </div>
         <div class="mt-3 space-y-1 px-2">
-          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white">Your profile</a>
-          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white">Settings</a>
-          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white">Sign out</a>
+          <a href="/profile" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white">Your profile</a>
+          <a href="/settings" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white">Settings</a>
+          <a href="/logout" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-white/5 hover:text-white">Sign out</a>
         </div>
       </div>
     </div>
@@ -102,12 +102,21 @@
 
   <header class=" bg-gray-800 after:pointer-events-none after:absolute after:inset-x-0 after:inset-y-0 after:border-y after:border-white/10">
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold tracking-tight text-white">Dashboard</h1>
+      <h1 class="text-3xl font-bold tracking-tight text-white">{{ $title }}</h1>
     </div>
   </header>
   <main>
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <!-- Your content -->
+        {{-- Main content --}}
+         <p class="mt-2 text-lg text-gray-300">Welcome to the {{ $title }} page.</p>
+        {{-- Blade Directives --}}
+        <div class="flex mt-3">
+            @for ($i = 1; $i <= 10; $i++)
+            @if ($i % 2 === 0)
+                <div class=" w-8 h-8 bg-teal-500 text-white p-0 me-1 text-xs grid place-items-center">{{ $i }}</div>
+            @endif
+            @endfor
+        </div>
     </div>
   </main>
 </div>
