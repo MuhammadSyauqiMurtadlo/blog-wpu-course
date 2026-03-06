@@ -22,6 +22,7 @@ Route::get('/posts/{post:slug}', function(Post $post) {
 Route::get('/about', function () {
     return view('about', ['title' => 'About']);
 });
+
 Route::get('/contact', function () {
     return view('contact', ['title' => 'Contact']);
 });
