@@ -1,18 +1,6 @@
 <x-layout :title="$title">
-    {{-- @foreach ($posts as $post)
-  <article class="py-8 max-w-3xl border-b border-gray-300">
-    <a href="/posts/{{ $post['slug'] }}" class="hover:underline">
-    <h2 class="mb-1 text-3xl tracking-tight font-bold text-gray-900">{{ $post['title'] }}</h2>
-    </a>
-    <div class="text-sm text-gray-500">
-        By <a href="/authors/{{ $post->author->username }}" class="text-gray-900 hover:underline">{{ $post->author->name }}</a> in <a href="/categories/{{ $post->category->slug }}" class="text-gray-900 hover:underline">{{ $post->category->name }}</a> | <time datetime="2024-06-01">June 1, 2024</time>
-    </div>
-    <p class="my-4 font-light">{{ Str::limit($post['body'], 150) }}</p>
-    <a href="/posts/{{ $post['slug'] }}" class="font-medium text-blue-500 hover:underline">Read More &raquo;</a>
-  </article>
-    @endforeach --}}
 
-  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+  <div class="py-8 px-4 mx-auto max-w-7xl lg:py-16 lg:px-6">
       <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2">
         @foreach ($posts as $post)
           <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
@@ -33,7 +21,7 @@
                           {{ $post->author->name }}
                       </span>
                   </div>
-                  <a href="/posts/{{ $post['slug'] }}" class="inline-flex text-xs items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
+                  <a href="/posts/{{ $post['slug'] }}" class="inline-flex text-xs items-center font-medium text-primary-600 dark:text-primary-600 hover:underline">
                       Read more
                       <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                   </a>
