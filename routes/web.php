@@ -15,27 +15,12 @@ Route::get('/', function () {
 
 Route::get('/posts', function() {
     // $posts = Post::with('author', 'category')->latest()->get();
-    $posts = Post::latest();
-
-    if(Request('search')){
-        $posts->where('title', 'like', '%' . Request('search') . '%');
-    }
-
-    return view('posts', ['title' => 'Blog', 'posts' => $posts->get()]);
+    $posts = Post::latest()->filter(request(['search', 'category', 'author']))->get();
+    return view('posts', ['title' => 'Blog', 'posts' => $posts]);
 });
 
 Route::get('/posts/{post:slug}', function(Post $post) {
     return view('post', ['title' => $post->title, 'post' => $post]);
-});
-
-Route::get('/authors/{user:username}', function(User $user) {
-    // $posts = $user->posts->load('category', 'author');
-    return view('posts', ['title' => count($user->posts) . ' Artikel by ' . $user->name, 'posts' => $user->posts]);
-});
-
-Route::get('/categories/{category:slug}', function(Category $category) {
-    // $posts = $category->posts->load('category', 'author');
-    return view('posts', ['title' => count($category->posts) . ' Category: ' . $category->name, 'posts' => $category->posts]);
 });
 
 Route::get('/about', function () {
